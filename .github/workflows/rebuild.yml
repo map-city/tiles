@@ -1,0 +1,51 @@
+name: Weekly Rebuild of Tiles for Open Data Toronto
+
+on:
+  # Schedule workflow to run weekly
+#   schedule:
+#     - cron: '20 4 * * *'
+  # Run workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tippecanoe dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc g++ make libsqlite3-dev zlib1g-dev
+
+      - name: Clone tippecanoe source to custom directory
+        run: |
+          git clone https://github.com/mapbox/tippecanoe.git tools/tippecanoe
+
+      - name: Build tippecanoe
+        working-directory: tools/tippecanoe
+        run: |
+          make -j
+          echo "$(pwd)/tools/tippecanoe" >> $GITHUB_PATH
+
+      - name: Test tippecanoe command
+        run: tippecanoe --version
+
+      - name: Commit updated vector tiles
+        run: |
+            git config --global user.name "$GIT_USER"
+            git config --global user.email $GIT_EMAIL
+            git add data/ tiles/
+            if ! git diff --cached --quiet; then
+              git commit -m "Rebuild vector tiles"
+              git push
+            else
+              echo "No changes to commit"
+            fi
+        env:
+            GIT_USER: ${{ vars.GitUser }}
+            GIT_EMAIL: ${{ vars.GitEmail }}
