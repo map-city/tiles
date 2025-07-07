@@ -30,7 +30,7 @@ jobs:
         working-directory: tools/tippecanoe
         run: |
           make -j
-          echo "$(pwd)/tools/tippecanoe" >> $GITHUB_PATH
+          echo "$PWD" >> $GITHUB_PATH
 
       - name: Test tippecanoe command
         run: tippecanoe --version
