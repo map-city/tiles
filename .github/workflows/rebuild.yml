@@ -59,6 +59,7 @@ jobs:
         run: |
           tippecanoe -zg --drop-densest-as-needed \
           --no-tile-compression \
+          --force \
           --output-to-directory=tiles \
           --layer=roads data/roads.geojson \
           --layer=property-boundaries data/property-boundaries.geojson
