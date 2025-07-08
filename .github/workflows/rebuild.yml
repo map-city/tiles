@@ -58,9 +58,10 @@ jobs:
       - name: Build vector tiles with tippecanoe
         run: |
           tippecanoe \
+          --minimum-zoom=9 \
           --maximum-zoom=18 \
-          --exclude-all \
-          --drop-densest-as-needed \
+          --no-feature-limit \
+          --no-tile-size-limit \
           --no-tile-compression \
           --force \
           --output-to-directory=tiles \
