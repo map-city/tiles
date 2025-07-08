@@ -39,6 +39,7 @@ def main():
         if response.status_code == 200:
             with open(filename, mode="wb") as data_file:
                 data_file.write(response.content)
+                print(filename)
 
 
 if __name__ == "__main__":
