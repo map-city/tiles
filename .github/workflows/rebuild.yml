@@ -40,7 +40,9 @@ jobs:
         run: |
           make -j
           echo "$PWD" >> $GITHUB_PATH
-          tippecanoe --version
+      
+      - name: Verify tippecanoe version
+        run: tippecanoe --version
 
       - name: Check for data directories
         run: |
