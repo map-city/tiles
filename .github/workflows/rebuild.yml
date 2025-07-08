@@ -54,8 +54,15 @@ jobs:
       
       - name: Download from Open Data Toronto
         run: python python/download.py
+      
+      - name: Build vector tiles with tippecanoe
+        run: |
+          tippecanoe -zg --drop-densest-as-needed \
+          --output-to-directory=tiles \
+          --layer=roads data/roads.geojson \
+          --layer=property-boundaries data/property-boundaries.geojson
 
-      - name: Commit updated vector tiles
+      - name: Commit vector tiles
         run: |
           git config --global user.name "$GIT_USER"
           git config --global user.email $GIT_EMAIL
