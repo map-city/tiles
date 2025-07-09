@@ -2,18 +2,16 @@ import requests
 
 
 class Layer:
-    def __init__(self, id, name, format="geojson"):
+    def __init__(self, id, name, source, format="geojson"):
         self.id = id
         self.name = name
+        self.source = source
         self.format = format
 
 
-def resource_url(
-    data_id,
-    format="geojson",
-    api_url="https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show",
-):
-    response = requests.get(api_url, params={"id": data_id}).json()
+def resource_url(data_id, format="geojson"):
+    metadata_url = f"https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show?id={data_id}"
+    response = requests.get(metadata_url).json()
     resources = [
         resource
         for resource in response["result"]["resources"]
@@ -28,12 +26,12 @@ def resource_url(
 def main():
     DATA_FOLDER = "data"
     LAYERS = [
-        Layer(id="toronto-centreline-tcl", name="roads"),
-        Layer(id="property-boundaries", name="property-boundaries"),
+        Layer(id="toronto-centreline-tcl", name="roads", source="Open Data TO"),
+        Layer(id="property-boundaries", name="property-boundaries", source="Open Data TO"),
     ]
 
     for layer in LAYERS:
-        url = resource_url(data_id=layer.id, format=layer.format)
+        url = resource_url(layer.id, layer.format)
         filename = f"{DATA_FOLDER}/{layer.name}.{layer.format}"
         response = requests.get(url)
         if response.status_code == 200:
