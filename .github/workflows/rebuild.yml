@@ -46,7 +46,7 @@ jobs:
 
       - name: Check for data directories
         run: |
-          for DIR in "data" "tiles"; do
+          for DIR in "data" "toronto"; do
             if [ ! -d "$DIR" ]; then
               mkdir -p "$DIR"
             fi
@@ -64,7 +64,7 @@ jobs:
           --no-tile-size-limit \
           --no-tile-compression \
           --force \
-          --output-to-directory=tiles \
+          --output-to-directory=toronto \
           --layer=roads data/roads.geojson \
           --layer=property-boundaries data/property-boundaries.geojson
 
@@ -72,7 +72,7 @@ jobs:
         run: |
           git config --global user.name "$GIT_USER"
           git config --global user.email $GIT_EMAIL
-          git add tiles/
+          git add toronto/
           if ! git diff --cached --quiet; then
             git commit -m "Rebuild vector tiles"
             git push
