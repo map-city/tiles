@@ -19,12 +19,12 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-            python-version: '3.x'
+          python-version: '3.x'
 
       - name: Install pip dependencies
         run: |
-            python -m pip install --upgrade pip
-            if [ -f python/requirements.txt ]; then pip install -r python/requirements.txt; fi
+          python -m pip install --upgrade pip
+          if [ -f python/requirements.txt ]; then pip install -r python/requirements.txt; fi
 
       - name: Install tippecanoe dependencies
         run: |
@@ -53,7 +53,7 @@ jobs:
           done
       
       - name: Download from Open Data Toronto
-        run: python python/download.py
+        run: python python/download.py --folder data --layers data/layers.json
       
       - name: Build vector tiles with tippecanoe
         run: |

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "toronto-centreline-tcl",
+    "name": "roads",
+    "format": "geojson"
+  },
+  {
+    "id": "property-boundaries",
+    "name": "property-boundaries",
+    "format": "geojson"
+  }
+]
