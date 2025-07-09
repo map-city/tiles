@@ -65,8 +65,8 @@ jobs:
           --no-tile-compression \
           --force \
           --output-to-directory=toronto \
-          --layer=roads data/roads.geojson \
-          --layer=property-boundaries data/property-boundaries.geojson
+          data/roads.geojson \
+          data/property-boundaries.geojson
 
       - name: Commit vector tiles
         run: |
