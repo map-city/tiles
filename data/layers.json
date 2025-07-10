@@ -1,12 +1,23 @@
 [
   {
+    "id": "neighbourhoods",
+    "name": "neighbourhoods",
+    "format": "geojson",
+    "sort_by": ["position", false],
+    "zoom": "low"
+  },
+  {
     "id": "toronto-centreline-tcl",
     "name": "roads",
-    "format": "geojson"
+    "format": "geojson",
+    "sort_by": ["last_modified", true],
+    "zoom": "high"
   },
   {
     "id": "property-boundaries",
     "name": "property-boundaries",
-    "format": "geojson"
+    "format": "geojson",
+    "sort_by": ["last_modified", true],
+    "zoom": "high"
   }
 ]

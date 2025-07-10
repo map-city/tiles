@@ -55,20 +55,39 @@ jobs:
         run: mkdir -p "$DATA_DIR" "$TILE_DIR"
       
       - name: Download from Toronto Open Data
-        run: python "$SCRIPT_DIR/download.py" --folder "$DATA_DIR" --layers "$DATA_DIR/layers.json"
+        run: python "$SCRIPT_DIR/download.py" --folder "$DATA_DIR" --layers "$DATA_DIR/layers.json" --env ".env_layers"
       
-      - name: Build vector tiles with tippecanoe
+      - name: Load layer filenames
+        run: |
+          source .env_layers
+          echo "LOW_ZOOM_LAYERS=$LOW_ZOOM_LAYERS" >> $GITHUB_ENV
+          echo "HIGH_ZOOM_LAYERS=$HIGH_ZOOM_LAYERS" >> $GITHUB_ENV
+
+      - name: Build low zoom vector tiles
+        if: ${{ env.LOW_ZOOM_LAYERS != '' }}
         run: |
           tippecanoe \
           --minimum-zoom=9 \
-          --maximum-zoom=18 \
+          --maximum-zoom=14 \
           --maximum-tile-bytes=1000000 \
-          --drop-densest-as-needed \
+          --coalesce-smallest-as-needed \
           --no-tile-compression \
           --force \
           --output-to-directory="$TILE_DIR" \
-          "$DATA_DIR/roads.geojson" \
-          "$DATA_DIR/property-boundaries.geojson"
+          $LOW_ZOOM_LAYERS
+
+      - name: Build high zoom vector tiles
+        if: ${{ env.HIGH_ZOOM_LAYERS != '' }}
+        run: |
+          tippecanoe \
+          --minimum-zoom=15 \
+          --maximum-zoom=18 \
+          --maximum-tile-bytes=1000000 \
+          --coalesce-smallest-as-needed \
+          --no-tile-compression \
+          --force \
+          --output-to-directory="$TILE_DIR" \
+          $HIGH_ZOOM_LAYERS
 
       - name: Commit vector tiles
         run: |
