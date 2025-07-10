@@ -88,7 +88,7 @@ jobs:
           --force \
           --output-to-directory="$TILE_DIR-high" \
           $HIGH_ZOOM_LAYERS
-          mv "$TILE_DIR-high/." "$TILE_DIR/"
+          mv "$TILE_DIR-high/"* "$TILE_DIR/"
 
       - name: Commit vector tiles
         run: |
