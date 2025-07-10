@@ -86,8 +86,9 @@ jobs:
           --coalesce-smallest-as-needed \
           --no-tile-compression \
           --force \
-          --output-to-directory="$TILE_DIR" \
+          --output-to-directory="$TILE_DIR-high" \
           $HIGH_ZOOM_LAYERS
+          mv "$TILE_DIR-high/." "$TILE_DIR/"
 
       - name: Commit vector tiles
         run: |
