@@ -62,7 +62,8 @@ jobs:
           tippecanoe \
           --minimum-zoom=9 \
           --maximum-zoom=18 \
-          --coalesce-densest-as-needed \
+          --maximum-tile-bytes=1000000 \
+          --drop-densest-as-needed \
           --no-tile-compression \
           --force \
           --output-to-directory="$TILE_DIR" \
