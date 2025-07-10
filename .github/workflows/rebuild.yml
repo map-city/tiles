@@ -1,10 +1,10 @@
-name: Weekly Rebuild of Tiles for Open Data Toronto
+name: Build Vector Tiles [Toronto Open Data]
 
 on:
-  # Schedule workflow to run weekly
-#   schedule:
-#     - cron: '20 4 * * *'
-  # Run workflow manually from the Actions tab
+  # Schedule weekly workflow run
+  schedule:
+    - cron: '4 4 * * 4'
+  # Allow manual workflow runs
   workflow_dispatch:
 
 permissions:
@@ -13,6 +13,13 @@ permissions:
 jobs:
   rebuild:
     runs-on: ubuntu-latest
+
+    env:
+      DATA_DIR: data
+      TILE_DIR: toronto
+      SCRIPT_DIR: python
+      GIT_USER: ${{ vars.GitUser }}
+      GIT_EMAIL: ${{ vars.GitEmail }}
 
     steps:
       - uses: actions/checkout@v4
@@ -24,7 +31,7 @@ jobs:
       - name: Install pip dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f python/requirements.txt ]; then pip install -r python/requirements.txt; fi
+          if [ -f "$SCRIPT_DIR/requirements.txt" ]; then pip install -r "$SCRIPT_DIR/requirements.txt"; fi
 
       - name: Install tippecanoe dependencies
         run: |
@@ -44,41 +51,32 @@ jobs:
       - name: Verify tippecanoe version
         run: tippecanoe --version
 
-      - name: Check for data directories
-        run: |
-          for DIR in "data" "toronto"; do
-            if [ ! -d "$DIR" ]; then
-              mkdir -p "$DIR"
-            fi
-          done
+      - name: Verify data directories
+        run: mkdir -p "$DATA_DIR" "$TILE_DIR"
       
-      - name: Download from Open Data Toronto
-        run: python python/download.py --folder data --layers data/layers.json
+      - name: Download from Toronto Open Data
+        run: python "$SCRIPT_DIR/download.py" --folder "$DATA_DIR" --layers "$DATA_DIR/layers.json"
       
       - name: Build vector tiles with tippecanoe
         run: |
           tippecanoe \
           --minimum-zoom=9 \
           --maximum-zoom=18 \
-          --no-feature-limit \
-          --no-tile-size-limit \
+          --coalesce-densest-as-needed \
           --no-tile-compression \
           --force \
-          --output-to-directory=toronto \
-          data/roads.geojson \
-          data/property-boundaries.geojson
+          --output-to-directory="$TILE_DIR" \
+          "$DATA_DIR/roads.geojson" \
+          "$DATA_DIR/property-boundaries.geojson"
 
       - name: Commit vector tiles
         run: |
           git config --global user.name "$GIT_USER"
           git config --global user.email $GIT_EMAIL
-          git add toronto/
+          git add "$TILE_DIR/"
           if ! git diff --cached --quiet; then
             git commit -m "Rebuild vector tiles"
             git push
           else
             echo "No changes to commit"
           fi
-        env:
-          GIT_USER: ${{ vars.GitUser }}
-          GIT_EMAIL: ${{ vars.GitEmail }}
