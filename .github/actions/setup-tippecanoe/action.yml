@@ -1,0 +1,38 @@
+name: 'Setup Tippecanoe'
+description: 'Install Tippecanoe from source and add it to GITHUB_PATH'
+
+inputs:
+  path:
+    description: 'Tippecanoe install directory (will be added to GITHUB_PATH)'
+    required: false
+    default: 'tools/tippecanoe'
+  
+  ref:
+    description: 'Git ref (branch, tag, or commit) to checkout'
+    required: false
+    default: 'main'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install build dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc g++ make libsqlite3-dev zlib1g-dev rsync
+      shell: bash
+
+    - name: Clone Tippecanoe
+      run: |
+        git clone --depth 1 --branch ${{ inputs.ref }} https://github.com/felt/tippecanoe.git "${{ inputs.path }}"
+      shell: bash
+
+    - name: Build Tippecanoe
+      working-directory: ${{ inputs.path }}
+      run: |
+        make -j
+        echo "$PWD" >> $GITHUB_PATH
+      shell: bash
+
+    - name: Verify Tippecanoe
+      run: tippecanoe --version
+      shell: bash

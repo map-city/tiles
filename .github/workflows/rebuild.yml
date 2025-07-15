@@ -28,28 +28,15 @@ jobs:
         with:
           python-version: '3.x'
 
+      - uses: ./.github/actions/setup-tippecanoe
+        with:
+          path: tools/tippecanoe
+          ref: main
+
       - name: Install pip dependencies
         run: |
           python -m pip install --upgrade pip
           if [ -f "$SCRIPT_DIR/requirements.txt" ]; then pip install -r "$SCRIPT_DIR/requirements.txt"; fi
-
-      - name: Install tippecanoe dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y gcc g++ make libsqlite3-dev zlib1g-dev rsync
-
-      - name: Clone tippecanoe source
-        run: |
-          git clone https://github.com/felt/tippecanoe.git tools/tippecanoe
-
-      - name: Build tippecanoe
-        working-directory: tools/tippecanoe
-        run: |
-          make -j
-          echo "$PWD" >> $GITHUB_PATH
-      
-      - name: Verify tippecanoe version
-        run: tippecanoe --version
 
       - name: Verify data directories
         run: mkdir -p "$DATA_DIR" "$TILE_DIR"
