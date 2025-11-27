@@ -793,9 +793,9 @@ j7  “»Ü÷⁄¥t©§	º
 ÷"	∆?î?*l.†´ -ü:  ëåÜ’⁄Å@ﬁÉ	‘
 ÷"	∞=‰?*.†° m¨1:  àêÜ’⁄î<ﬁÅ	‘
 ÷"	†A“>* Œç -ük:Âx
-roads(Ä _idCENTRELINE_IDLINEAR_NAME_IDLINEAR_NAME_FULLLINEAR_NAME_FULL_LEGAL	ADDRESS_L	ADDRESS_RPARITY_LPARITY_RLINEAR_NAMELINEAR_NAME_TYPELINEAR_NAME_DIRLINEAR_NAME_DESCLINEAR_NAME_LABELFROM_INTERSECTION_IDTO_INTERSECTION_IDONEWAY_DIR_CODE_DESCFEATURE_CODEFEATURE_CODE_DESCJURISDICTIONCENTRELINE_STATUSOBJECTIDMI_PRINXLO_NUM_LHI_NUM_LLO_NUM_RHI_NUM_RBEGIN_ADDR_POINT_ID_LEND_ADDR_POINT_ID_LBEGIN_ADDR_POINT_ID_REND_ADDR_POINT_ID_RBEGIN_ADDR_L
+roads(Ä _idCENTRELINE_IDLINEAR_NAME_IDLINEAR_NAME_FULLLINEAR_NAME_FULL_LEGAL	ADDRESS_L	ADDRESS_RPARITY_LPARITY_RLO_NUM_LHI_NUM_LLO_NUM_RHI_NUM_RBEGIN_ADDR_POINT_ID_LEND_ADDR_POINT_ID_LBEGIN_ADDR_POINT_ID_REND_ADDR_POINT_ID_RBEGIN_ADDR_L
 END_ADDR_LBEGIN_ADDR_R
-END_ADDR_RLOW_NUM_ODDHIGH_NUM_ODDLOW_NUM_EVENHIGH_NUM_EVEN"
+END_ADDR_RLOW_NUM_ODDHIGH_NUM_ODDLOW_NUM_EVENHIGH_NUM_EVENLINEAR_NAMELINEAR_NAME_TYPELINEAR_NAME_DIRLINEAR_NAME_DESCLINEAR_NAME_LABELFROM_INTERSECTION_IDTO_INTERSECTION_IDONEWAY_DIR_CODE_DESCFEATURE_CODEFEATURE_CODE_DESCJURISDICTIONCENTRELINE_STATUSOBJECTIDMI_PRINX"
 E"
 N"
 O"
@@ -831,17 +831,13 @@ Greer Road"
 CITY OF TORONTO"
 Glengarry Avenue"
 Lawrence Avenue West"
-Ln N Douglas E Elm Rd" 	" " a" b" c" d" e" r" âÉ" çòµ" èn" ê" ëòµ" ìπE" õ" ú¶" ùæµ" ¢◊" §Õ1" •πE" ¶πE" ¶Õ1" ™ﬂ" ¨óµ" Øôµ" ≤π0" ≥π0" ¥π0" µπ0" ∏‘" ∫⁄" ºπE" øπ⁄" ¿" ≈" ∆Ù∑" «"  " Ã≠" ÕÔ" –æµ" —≠" “" ‘" ‘æµ" ÷ñµ" ‹" ›ï" ﬂÈ" ‚ø" „Ã1" ‰ß" Âø" Á‹ÿ" ÈÃ1" È‹ÿ" Óòµ" Ôö" £" Ú" Úòµ" Ûæµ" ˆ∏0" ˆ‹ÿ" ¯É" ¯∏0" ˘" ˚π0" ˛π0E. UA+  	 
- X`TJJ"	¿0ü°†ù,ˆü.hN H@L %E(FS3W6% E!("F#%$E%(&F	
-*]0
-ZZ"	†AÃ "ü.Ø%˛
-œîü0B. )4c		
-*80
-22"	†AÊüªãÕA. aVc		
-8X0
-??"	Ù;‹À€/üaN R5\ 'C&B=e<d' C!&"B#'$C%&&B	
-8-0
-GG"	Ù;‹Û;ü0eN 71O /C,KM^ID/ C!,"K#/$C%,&K	
-Y9[QQ"	†A‹:ü.Éˆß†aN P.\ !#"$_:b;! #!""$#!$#%"&$	
-N80
->>"	†Aéü0ãû
+Ln N Douglas E Elm Rd" 	" " a" b" c" d" e" r" çòµ" èn" ê" ëòµ" ìπE" õ" õ›" ú¶" ùæµ" £ú" §ú" §Õ1" •ú" •πE" ¶ú" ¶πE" ¶Õ1" ®ú" ™ú" ¨óµ" Øôµ" ≤π0" ≥π0" ¥π0" µπ0" ∏˙" π˙" ∫˙" ª˙" ºπE" º˙" Ω˙" øπ⁄" ¿" ≈" ∆Ù∑" «"  " –æµ" “" ‘" ‘æµ" ÷ñµ" ‹" ﬂÈ" „Ã1" ‰ß" Á‹ÿ" ÈÃ1" È‹ÿ" Óòµ" £" Ú" Úòµ" Ûæµ" ˆ∏0" ˆ‹ÿ" ¯∏0" ˘" ˚π0" ˛π0dN BFQ 	%
+M(NV4Y9%M(N%M(N)^ !0"
+#$%2&2"	†Aå!ü0ˇ?‡ü0A. GXc	<Z !0"
+#$%:&:"	ñ<˛’˝/üE. HI*    Za !W"#$%;&;"	∏0ü£†ì,Ùü0eN E8] 	'
+K&JAe@d'K&J'K&J<, !0"
+#$%7&7"	ñ<˛Ì)îß∫ü0B. D6c	)< !0"
+#$%5&5"	†A∏ü•ÈìeN /1T 	.
+K+PR_OL.K+P.K+P[= !\"#$%U&U"	†A‹:ü.Éˆß†aN C-] 	!
+#"$`>b?!#"$!#"$S< !0"
+#$%3&3"	†A¿ü.Èê

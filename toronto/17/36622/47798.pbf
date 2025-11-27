@@ -910,10 +910,10 @@ QóHGmõŸ¥ ‰ -8  æÜÐÏØtÙÀ	š
 ¯"	 Aš/ †‰Û@! ‘„ÎÒØ„„ü	
 ¯"	 A’* ˆŸ0Í#º
 ÏËž%÷
-áx
-roads(€ _idCENTRELINE_IDLINEAR_NAME_IDLINEAR_NAME_FULLLINEAR_NAME_FULL_LEGAL	ADDRESS_L	ADDRESS_RPARITY_LPARITY_RLINEAR_NAMELINEAR_NAME_TYPELINEAR_NAME_DIRLINEAR_NAME_DESCLINEAR_NAME_LABELFROM_INTERSECTION_IDTO_INTERSECTION_IDONEWAY_DIR_CODE_DESCFEATURE_CODEFEATURE_CODE_DESCJURISDICTIONCENTRELINE_STATUSOBJECTIDMI_PRINXLO_NUM_LHI_NUM_LLO_NUM_RHI_NUM_RBEGIN_ADDR_POINT_ID_LEND_ADDR_POINT_ID_LBEGIN_ADDR_POINT_ID_REND_ADDR_POINT_ID_RBEGIN_ADDR_L
+äx
+roads(€ _idCENTRELINE_IDLINEAR_NAME_IDLINEAR_NAME_FULLLINEAR_NAME_FULL_LEGAL	ADDRESS_L	ADDRESS_RPARITY_LPARITY_RLO_NUM_LHI_NUM_LLO_NUM_RHI_NUM_RBEGIN_ADDR_POINT_ID_LEND_ADDR_POINT_ID_LBEGIN_ADDR_POINT_ID_REND_ADDR_POINT_ID_RBEGIN_ADDR_L
 END_ADDR_LBEGIN_ADDR_R
-END_ADDR_RLOW_NUM_ODDHIGH_NUM_ODDLOW_NUM_EVENHIGH_NUM_EVEN"
+END_ADDR_RLOW_NUM_ODDHIGH_NUM_ODDLOW_NUM_EVENHIGH_NUM_EVENLINEAR_NAMELINEAR_NAME_TYPELINEAR_NAME_DIRLINEAR_NAME_DESCLINEAR_NAME_LABELFROM_INTERSECTION_IDTO_INTERSECTION_IDONEWAY_DIR_CODE_DESCFEATURE_CODEFEATURE_CODE_DESCJURISDICTIONCENTRELINE_STATUSOBJECTIDMI_PRINX"
 E"
 N"
 O"
@@ -954,27 +954,19 @@ Woburn Ave"
 Bedford Park Avenue"
 Ln N Woburn W Greer Rd"
 Ln N Bedford Park W Elm"
-Ln N Bedford Park W Greer Rd" `" †ú" ‡ú" ˆú" ‰ú" Šn" ŒŽ" n" ŽÝØ" ¹E" •¾" –¹Ú" —ÝØ" ˜ÝØ" ™n" ™˜" ™ÝØ" šn" š˜" ›˜" œ" œ˜" œ¦" žŒ0" ŸŒ0" Ÿû."  "  û." ¡" ¢" £" £6" ¤6" ¤³" ¥—µ" ¦" §" ª" ª—Ð" «÷Ú	" ¬€6" ¬—Ð" ¯€6" °Ñ" ±–µ" µ" ¶ö0" ¸–µ" ¸¥" ¹" ¹«" ¹­" º" º¼Ú" ¼Ž" ¼­" ½Ž" À" Ã" Ä–µ" Åá" Æá" ÇÝØ" ÈŠ©" Ë•µ" Í" ÍÝØ" Î" ÎÝØ" ÏÝØ" Ò­" Ó­" Óú." Ô•µ" Ô÷" Õ÷" Öú." Ø" Ù‰Ð" ÙÂ" Û" ÝŒ0" Þ¿" ß¿" àŒ0" áŒ0" á¸Ú" ã$" ãŒ0" ä§" ä¸E" å¸E" æ¿" ç¿" è" é" ì”µ" ì­" ï¿" ð”µ" ò¸Ú" ô" õ" ÷" ÷õ" ø" ù€6" ù¸E" ü€6" ÿ€6C0 (W		
-	f‰V88"	üð£ï-Ÿ>. )3W		
-	6fV99"
+Ln N Bedford Park W Greer Rd" `" Šn" Œ" n" ŽÝØ" ¹E" –¹Ú" —ÝØ" ˜ÝØ" ™n" ™ÝØ" šn" š˜" ›˜" œ" œ˜" œ¦" žŒ0" ŸŒ0" Ÿû."  "  û." ¡" ¢" £" £6" ¤6" ¤³" ¥—µ" ¦" §" ª" ª—Ð" «÷Ú	" ¬€6" ¬—Ð" ¬¼" ­œ" ¯€6" °Ñ" ±–µ" ´œ" µ" ¶ö0" ·œ" ¸–µ" ¸¥" ¹" ¹«" ¹­" º" º¼Ú" ¼" ½" À" Àú" Ã" Ä–µ" Åá" Æá" Æú" ÇÝØ" ÈŠ©" Éú" Ë•µ" ËÀ" Í" ÍÝØ" Î" ÎÝØ" ÏÝØ" Ó­" Óú." Ô•µ" Ô÷" Õ½" Õ÷" Öú." Ø" Ù‰Ð" Ú½" Û" ÝŒ0" àŒ0" áŒ0" á¸Ú" â½" ã$" ãŒ0" ä§" ä¸E" å¸E" è" é" ì”µ" ì­" ð”µ" ð÷" ñ÷" ò¸Ú" ò÷" ô" õ" ÷" ÷õ" ø" ù€6" ù¸E" ü€6" ÿ€6fP e€=  	h
+<jC7x8yh<jCh<jC„f !6"#$%R&R"	 A¤Ÿ.Ýd¥&ºD1 ‡U		f† !T"#$%2&2"	üð£ï-Ÿ?/ ˆ.U		0f !T"#$%3&3"
 	àÎ
-ãÝgT *QC  J…K„{c~bJ …!K"„#J$…%K&„	
-fR<;;"	üðûÖŸ.>. x2W		
-	U6VYY"
+ãÝhU ŠM=  	D
+ƒE‚za~`DƒE‚DƒE‚fN !6"#$%5&5"	üðûÖŸ.>. q-U		S0 !T"#$%W&W"
 	°¢)
-ÏÓA. y[7##	#
-#.6]]"	 AÈŸ.Ÿ%Ø
-D1 ˆt4!!	!
-!6M‡‡"	àÎßîŸ.N> ^jW	 &&TT& &%&&&	
-	kUVqq"
+ÏÓC0 |u/!!!!0G !"#$%…&…"	àÎßîŸ.N> [kU	 	&
+&QQ&&&&	lS !T"#$%r&r"
 	Ä"Ì7
-“©hU uL} `_“EeF` !_"#`$%_&	
-
-UOVGG"	°¢)¯úŸ.cP '€C  gBiI=w>zg B!i"I#g$B%i&I	
-†f<55"	 AžŸ0ƒ)¢C/ \Š+$$	$
-$k|pp"	Ä"Ì7ç´£ B/ ƒhW		
-	HkVmm"	Ê% A1ŸÓ³fS ,‘} vSsZPN’v S!s"Z#v$S%s&Z	
-
-oU<ŽŽ"	 A Ÿ.Ï!Ô	A. 01-%%	%
-%dkXX"	 AÎ.Ÿ.»ÐlU ‚/@" DŒ:‹rAn?D Œ!:"‹#D$Œ%:&‹	
-aH<ll"	 AÊ=Ÿ0ß† 
+“©hU gF} 	^
+\“?d@^\^\
+SI !T"#$%A&A"	°¢)¯úŸ.C/ Z‰'$$$$l{ !"#$%p&p"	Ä"Ì7ç´£ A. viU		Bl !T"#$%m&m"	Ê% A1ŸÓ³kT ]+:" 	>
+Œ4‹s;n9>Œ4‹>Œ4‹_B !6"#$%K&K"	 AÊ=Ÿ0ß† A. bY1####*0 !"#$%O&O"	 A°Ÿ.Ÿ%ð
+fS (‘} 	w
+PtXLH’wPtXwPtX
+oS !6"#$%Ž&Ž"	 A Ÿ.Ï!Ô	A. J,)%%%%cl !"#$%V&V"	 AÎ.Ÿ.»Ð
